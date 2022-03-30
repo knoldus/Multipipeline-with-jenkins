@@ -60,42 +60,11 @@ When you use maven to package or test, you can see if the test passes or fails (
 ~~~
 
 
-To see the unit test fail, edit `String greeting`string in the `HelloController` class.
 
-Example:
-
-~~~
-@RestController
-public class HelloController {
-
-	String greeting = "Hello Foo!";
-
-    @RequestMapping("/")
-    public String index() { return greeting; }
-    ...
-
-}
-~~~
-
-If you run your test again with maven, you will get an error:
-
-`mvn test`
-
-~~~
-[ERROR] Failures: 
-[ERROR]   HelloControllerTest.getHello:29 Response content
-Expected: "Hello World!"
-     but: was "Hello Foo!"
-[INFO] 
-[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
-[INFO] 
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time: 6.799 s
-[INFO] Finished at: 2018-06-20T08:03:55-07:00
-[INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.21.0:test (default-test) on project hello: There are test failures.
-~~~
-
-Fix your code and verify it will pass testing once again.
+Login to Jenkins 
+Click on new Project 
+Select MultiBranch Pipeline
+Copy git ssh url and Paste In Github section
+Save the changes
+And make different Branch-> feeature,Develop etc
+Makes changes to any branch Pipeline will trigger
