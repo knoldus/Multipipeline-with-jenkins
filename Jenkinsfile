@@ -12,7 +12,7 @@ pipeline
                     {
                     sh 'echo "Working in development branch"'
                      sh "mvn clean compile"
-                     sh "mvn test"
+                     
                      }
 
 
